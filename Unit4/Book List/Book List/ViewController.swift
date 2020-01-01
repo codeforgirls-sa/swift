@@ -23,23 +23,6 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
         tableView.tableFooterView = UIView()
         
         
-        // User defaults
-        let userDefault = UserDefaults.standard
-        
-        // setting values
-        userDefault.setValue("Sara", forKey: "name")
-        userDefault.setValue(false, forKey: "flag")
-        userDefault.setValue(20, forKey: "age")
-        
-        // getting values
-        let name = userDefault.string(forKey: "name")
-        let flag = userDefault.bool(forKey: "flag")
-        let age = userDefault.integer(forKey: "age")
-        
-        
-        print("\(name) \(age) \(flag)")
-        
-        
     }
     
     @IBAction func unwindToFirst(_ unwindSegue: UIStoryboardSegue) {
@@ -75,6 +58,18 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
         // Print the selected row index
         print("Cell selected at index: \(indexPath.row)")
         
+    }
+    
+    // Deleting row in a table
+    func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCell.EditingStyle, forRowAt indexPath: IndexPath) {
+      if editingStyle == .delete {
+        print("Deleted")
+        
+        // remove element from the array
+        books.remove(at: indexPath.row)
+        // remove row from the table
+        tableView.deleteRows(at: [indexPath], with: .automatic)
+      }
     }
 
     
