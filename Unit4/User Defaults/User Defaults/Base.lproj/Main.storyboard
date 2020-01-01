@@ -1,0 +1,92 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="15505" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15509"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="User_Defaults" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="bar" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="sca-jV-Ijz">
+                                <rect key="frame" x="20" y="89" width="374" height="31"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="30" id="6Ud-zM-Wox"/>
+                                </constraints>
+                                <segments>
+                                    <segment title="Light"/>
+                                    <segment title="Dark"/>
+                                </segments>
+                                <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <color key="selectedSegmentTintColor" red="0.66978305579999997" green="0.82374072070000004" blue="0.84533232449999995" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <connections>
+                                    <action selector="segmentControl:" destination="BYZ-38-t0r" eventType="valueChanged" id="0aZ-Un-NYs"/>
+                                </connections>
+                            </segmentedControl>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="cat" translatesAutoresizingMaskIntoConstraints="NO" id="rbY-F7-Hv5">
+                                <rect key="frame" x="107" y="162" width="200" height="200"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="200" id="2w9-UY-loJ"/>
+                                </constraints>
+                            </imageView>
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="0EA-Ji-zQz">
+                                <rect key="frame" x="20" y="415" width="374" height="40"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="40" id="8Ct-dY-wio"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="8VV-TL-H4p">
+                                <rect key="frame" x="20" y="474" width="374" height="40"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="40" id="fF6-TL-Ie8"/>
+                                </constraints>
+                                <state key="normal" title="Save"/>
+                                <connections>
+                                    <action selector="saveButtonAction:" destination="BYZ-38-t0r" eventType="touchUpInside" id="PxA-Xk-Tjt"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <constraints>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="rbY-F7-Hv5" secondAttribute="trailing" constant="107" id="0Wg-Qq-JZ9"/>
+                            <constraint firstItem="rbY-F7-Hv5" firstAttribute="top" secondItem="sca-jV-Ijz" secondAttribute="bottom" constant="43" id="7Sn-v4-roQ"/>
+                            <constraint firstItem="rbY-F7-Hv5" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="107" id="FLa-4V-8qC"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="0EA-Ji-zQz" secondAttribute="trailing" constant="20" id="RQF-cw-xqM"/>
+                            <constraint firstItem="rbY-F7-Hv5" firstAttribute="centerX" secondItem="6Tk-OE-BBY" secondAttribute="centerX" id="TDc-kx-DXQ"/>
+                            <constraint firstItem="sca-jV-Ijz" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="45" id="TVX-5L-K6e"/>
+                            <constraint firstItem="0EA-Ji-zQz" firstAttribute="top" secondItem="rbY-F7-Hv5" secondAttribute="bottom" constant="53" id="UrH-wo-rs2"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="sca-jV-Ijz" secondAttribute="trailing" constant="20" id="gyl-5z-YPm"/>
+                            <constraint firstItem="0EA-Ji-zQz" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="20" id="i8x-KH-CTD"/>
+                            <constraint firstItem="sca-jV-Ijz" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="20" id="oFc-f2-b1d"/>
+                            <constraint firstItem="8VV-TL-H4p" firstAttribute="top" secondItem="0EA-Ji-zQz" secondAttribute="bottom" constant="19" id="pgm-K1-X7J"/>
+                            <constraint firstItem="8VV-TL-H4p" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="20" id="s40-FQ-fHs"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="8VV-TL-H4p" secondAttribute="trailing" constant="20" id="tFY-bb-hJm"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                    </view>
+                    <connections>
+                        <outlet property="saveButton" destination="8VV-TL-H4p" id="no1-L7-gfH"/>
+                        <outlet property="segmentControl" destination="sca-jV-Ijz" id="Oci-o4-zeL"/>
+                        <outlet property="textField" destination="0EA-Ji-zQz" id="leS-85-b0z"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="137.68115942028987" y="99.776785714285708"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="cat" width="259" height="194"/>
+    </resources>
+</document>
